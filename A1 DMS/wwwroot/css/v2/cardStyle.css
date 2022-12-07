@@ -1,0 +1,480 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    font-size: 14px;
+    background-color: #f2f2f2;
+    color: #3f4e5a;
+    overflow-x: hidden;
+}
+
+.card-main {
+    display: flex;
+    justify-content: space-between;
+    font-family: Arial;
+    color: #212529;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !important;
+}
+
+.card-main > div {
+    padding: 5px 45px 20px 45px;
+    background-color: #fff;
+    width: 50%;
+    margin: 15px;
+    border: 2px solid grey;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.card-left {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 35px;
+}
+
+.card-label {
+    font-weight: bold;
+    margin-bottom: 6px;
+    margin-top: 15px;
+}
+
+.card-error {
+    color: red;
+    font-weight: normal !important;
+}
+
+.card-report-type {
+    grid-column: span 2;
+}
+
+.card-lsa {
+    grid-column: span 2;
+}
+
+.card-hid {
+    grid-column: span 2;
+}
+
+.card-main input[type=text], .card-main input[type=date], .card-main select, .card-main textarea {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #bbb;
+    height: 30px;
+    outline: none;
+    padding-left: 10px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !important;
+}
+
+.card-main input[type=date] {
+    width: 200px;
+}
+
+
+.card-main select {
+    width: 200px;
+}
+
+.card-main textarea {
+    height: 170px;
+}
+
+.card-inline {
+    display: inline;
+    font-weight: normal;
+    margin: 0;
+    margin-left: 3px;
+}
+
+.card-inline.bold {
+    font-weight: bold !important
+}
+
+.card-before-hint {
+    margin-bottom: 0px;
+}
+
+.card-hint {
+    margin-top: 0px;
+    font-weight: normal;
+}
+
+.card-inline-item {
+    margin-top: 7px;
+}
+
+.card-report-type-grid {
+    margin-left: 10px;
+}
+
+.card-lsa-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 10px;
+}
+
+.card-hid-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 10px;
+}
+
+.card-safe-choice-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 10px;
+}
+
+.card-border {
+    border-top: 3px dotted #000;
+    margin: 15px 0px;
+}
+
+.card-location {
+    width: 50% !important;
+}
+
+.card-button-row {
+    width: 300px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-button-row {
+    width: 391px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-button-row > button {
+    height: 45px;
+    width: 180px;
+    font-size: 17px;
+    cursor: pointer !important;
+}
+
+.card-button-row label {
+    font-weight: bold !important;
+    cursor: pointer !important;
+}
+
+.card-unique-id {
+    text-align: center;
+}
+
+@media (max-width: 1115px) {
+    .card-main {
+        flex-direction: column;
+    }
+
+        .card-main > div {
+            width: calc(100% - 30px);
+        }
+
+    .card-left {
+        margin-bottom: 0px !important;
+        border-bottom: none !important;
+        border-bottom-left-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+    }
+
+    .card-right {
+        margin-top: 0px !important;
+        border-top: none !important;
+        border-top-left-radius: 0px !important;
+        border-top-right-radius: 0px !important;
+    }
+}
+
+@media (max-width: 665px) {
+    .card-left {
+        grid-template-columns: 1fr !important;
+    }
+
+    .card-report-type {
+        grid-column: auto !important;
+    }
+
+    .card-lsa {
+        grid-column: auto !important;
+    }
+
+    .card-hid {
+        grid-column: auto !important;
+    }
+
+    .card-lsa-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .card-hid-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .card-safe-choice-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .card-location {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 515px) {
+    .card-inline-item {
+        white-space: normal !important;
+    }
+
+    .card-button-row {
+        flex-direction: column;
+        align-items: center;
+        width: auto !important;
+    }
+
+    .card-button-row > button {
+        margin: 5px;
+    }
+}
+
+
+@media (max-width: 390px) {
+    .card-main > div {
+        padding: 5px 30px 20px 15px !important;
+    }
+
+    .card-inline-item {
+        white-space: normal !important;
+    }
+}
+
+@media (max-width: 310px) {
+    .card-left {
+        display: block;
+    }
+
+    .card-main input[type=date], .card-main select {
+        width: 100% !important;
+    }
+}
+
+
+
+
+
+
+.auth-main {
+    background-color: #f7f7f7;
+    width: 760px;
+    margin: 20px auto;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    font-family: Arial;
+}
+
+@media (max-width: 805px) {
+    .auth-main {
+        width: 95% !important;
+        margin: 8px auto !important;
+    }
+
+    .auth-button-row {
+        flex-direction: column;
+        height: 140px;
+    }
+
+    .mp-date {
+        grid-template-columns: 1fr !important;
+    }
+
+    .mp-o1 {
+        order: 1;
+    }
+
+    .mp-o2 {
+        order: 2;
+    }
+
+    .mp-o3 {
+        order: 3;
+    }
+
+    .mp-o4 {
+        order: 4;
+    }
+}
+
+@media (max-width: 545px) {
+    .auth-button-row {
+        flex-direction: column;
+        height: 140px;
+    }
+}
+
+@media (max-width: 295px) {
+    .auth-main input[type=number] {
+        width: 200px !important;
+    }
+
+    .auth-main select {
+        width: 216px !important
+    }
+}
+
+
+@media (max-width: 235px) {
+    .auth-main input[type=number] {
+        width: 159px !important;
+    }
+
+    .auth-main select {
+        width: 175px !important
+    }
+}
+
+.auth-main select.error {
+    border: 2px solid red !important;
+    outline: none;
+}
+
+.auth-main input[type=number].error {
+    border: 2px solid red !important;
+    outline: none;
+}
+
+.auth-logo {
+    width: 99%;
+    display: block;
+    margin: 31px auto;
+    margin-bottom: 0px;
+}
+
+.auth-alert {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 12px;
+}
+
+.auth-alert.hidden {
+    visibility: hidden;
+}
+
+.auth-fields {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    margin-top: 40px;
+}
+
+.auth-field {
+    margin-bottom: 7px;
+}
+
+.auth-label-ru {
+    margin: 5px 0px;
+}
+
+.auth-label-en {
+    margin: 5px 0px;
+}
+
+.auth-control {
+    position: relative;
+    margin: 15px 0px;
+    border: 2px solid transparent;
+}
+
+.auth-control.error {
+    border: 2px solid red !important;
+}
+
+.auth-button-row {
+    width: 420px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    grid-column: span 2;
+}
+
+.auth-site {
+    width: 250px;
+    color: #3f4e5a;
+    background-color: #fff !important;
+    font-weight: 400 !important;
+    border: 2px solid #aab5bf !important;
+    border-radius: 5px !important;
+    height: 33px;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.auth-placeholder {
+    position: absolute;
+    margin-top: 8px;
+    margin-left: 12px;
+    font-size: 15px;
+    color: #888;
+    pointer-events: none;
+}
+
+.auth-placeholder.hidden {
+    display: none;
+}
+
+.auth-main input[type=number], input[type=date] {
+    width: 236px;
+    color: #3f4e5a;
+    background-color: #fff !important;
+    font-weight: 400 !important;
+    border: 2px solid #aab5bf !important;
+    border-radius: 5px !important;
+    height: 33px;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.auth-main input[type=date]{
+    width: 150px;
+    font-family: Arial;
+}
+
+.auth-lang-control {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.auth-button {
+    border-radius: 4px;
+    border: 2px solid #bbb;
+    color: #fff;
+    width: 175px;
+    font-size: 15px;
+    height: 63px;
+}
+
+.auth-save-button {
+    background-color: #147da9 !important;
+}
+
+.auth-participation-button {
+    background-color: #7698a7 !important;
+}
+
+.mp-date {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.mp-date > div {
+    margin: 5px 25px 5px 0px;
+}
+
+.mp-info {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.mp-label {
+    font-weight: bold;
+}

@@ -1,0 +1,61 @@
+﻿@page
+@model A1DMS.Pages.V2.Index
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function () {
+                try {
+                    w.yaCounter70510138 = new Ya.Metrika({
+                        id: 70510138,
+                        clickmap: true,
+                        trackLinks: true,
+                        accurateTrackBounce: true
+                    });
+                } catch (e) { }
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else { f(); }
+        })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <!-- /Yandex.Metrika counter -->
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <link rel="icon" type="image/png" href="~/images/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="~/css/v2/cardStyle.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/v2/components/modal.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/v2/components/select.css" />
+
+    @if (!string.IsNullOrEmpty(Model.Kiosk))
+    {
+        <script>var kiosk = "@Html.Raw(Model.Kiosk)"</script>
+    }
+    else
+    {
+        <script src="https://www.google.com/recaptcha/api.js?render=6LeK2AcaAAAAAKBb9Ayt7t41q8z4-9zz2fTlwmyf"></script>
+    }
+</head>
+<body>
+    <div id="main"></div>
+
+    <script type="module" src="~/bundle/cardBundle.js"></script>
+</body>
+</html>

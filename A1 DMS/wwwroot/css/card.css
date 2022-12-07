@@ -1,0 +1,135 @@
+html, body, form {
+    height: 100%;
+    font-size: 14px;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+#loading {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.75) url(images/loading2.gif) no-repeat center center;
+    z-index: 10000;
+}
+
+
+.newbackground {
+    background-color: #ffffff;
+}
+
+fieldset input {
+    float: left;
+    margin-right: 1em !important;
+}
+
+.error {
+    color: red;
+}
+
+fieldset label {
+    display: block;
+    overflow: auto;
+    margin-top: .2em !important;
+}
+
+input[type="radio"] {
+    width: 1.1em;
+    height: 1.1em;
+}
+
+input[type="checkbox"] {
+    width: 1.1em;
+    height: 1.1em;
+}
+
+.padding-top-18 {
+    padding-top: 18px;
+}
+
+.padding-bottom-18 {
+    padding-bottom: 18px;
+}
+
+.bordered-element {
+    border: 2px solid grey;
+    border-radius: 5px;
+}
+
+textarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+input[type=radio]:checked + label {
+    font-weight: bold !important;
+}
+
+input[type=checkbox]:checked + label {
+    font-weight: bold !important;
+}
+
+.ui-dialog {
+    opacity: 1 !important; /* Make sure to change both of these, as IE only sees the second one */
+    filter: Alpha(Opacity=100) !important;
+    background-color: #f2f2f2 !important;
+}
+
+.ui-dialog-content {
+    opacity: 1 !important; /* Make sure to change both of these, as IE only sees the second one */
+    filter: Alpha(Opacity=99) !important;
+    background-color: #f2f2f2 !important;
+}
+
+.ui-dialog-titlebar {
+    background-color: #147da9 !important;
+    color: white;
+}
+
+.ui-dialog .ui-dialog-buttonpane {
+    background-color: #f2f2f2 !important;
+}
+
+.ui-dialog button {
+    background-color: #147da9 !important;
+    color: white;
+}
+
+#dialog {
+    height: 200px;
+    margin: 50px;
+}
+
+.overlay {
+    background: #e9e9e9;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
+}
+
+#attachmentsTable {
+    display: none;
+}
+
+#attachmentsTable td {
+    padding: 3px 0px 3px 0px;
+}
+
+#fileInputPlus {
+    cursor: pointer;
+}
+
+.fileInputMinus {
+    cursor: pointer;
+    width: 22px;
+}

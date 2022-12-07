@@ -1,0 +1,1 @@
+{"version":3,"file":"AccessDenied.js","sourceRoot":"","sources":["../../../ts/pages/mgmt/AccessDenied.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,MAAM,OAAO,CAAC;AAE1B,MAAM,CAAC,OAAO,OAAO,YAAa,SAAQ,KAAK,CAAC,SAAS;IAC9C,MAAM;QACT,OAAO,6BAAK,SAAS,EAAC,eAAe,oCAAoC,CAAC;IAC9E,CAAC;CACJ"}

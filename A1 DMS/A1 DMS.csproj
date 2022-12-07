@@ -1,0 +1,217 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>A1DMS</RootNamespace>
+    <CopyRefAssembliesToPublishDirectory>false</CopyRefAssembliesToPublishDirectory>
+    <UserSecretsId>d6a34c0d-1b37-4e9d-9204-67352df2be66</UserSecretsId>
+    <AssemblyName>A1DMS</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\ts\pages\Auth.tsx" />
+    <Content Remove="wwwroot\ts\pages\Card.tsx" />
+    <Content Remove="wwwroot\ts\pages\CardLabel.tsx" />
+    <Content Remove="wwwroot\ts\pages\HazardId.tsx" />
+    <Content Remove="wwwroot\ts\pages\LSA.tsx" />
+    <Content Remove="wwwroot\ts\pages\mgmt\CardApp.tsx" />
+    <Content Remove="wwwroot\ts\pages\mgmt\CardDetails.tsx" />
+    <Content Remove="wwwroot\ts\pages\mgmt\Cards.tsx" />
+    <Content Remove="wwwroot\ts\pages\mgmt\Companies.tsx" />
+    <Content Remove="wwwroot\ts\pages\mgmt\companies\CompaniesEditForm.tsx" />
+    <Content Remove="wwwroot\ts\pages\mgmt\companies\CompaniesForm.tsx" />
+    <Content Remove="wwwroot\ts\pages\mgmt\companies\CompaniesNewForm.tsx" />
+    <Content Remove="wwwroot\ts\pages\mgmt\Departments.tsx" />
+    <Content Remove="wwwroot\ts\pages\mgmt\departments\DepartmentsEditForm.tsx" />
+    <Content Remove="wwwroot\ts\pages\mgmt\departments\DepartmentsForm.tsx" />
+    <Content Remove="wwwroot\ts\pages\mgmt\departments\DepartmentsNewForm.tsx" />
+    <Content Remove="wwwroot\ts\pages\mgmt\Employees.tsx" />
+    <Content Remove="wwwroot\ts\pages\mgmt\employees\EmployeesEditForm.tsx" />
+    <Content Remove="wwwroot\ts\pages\mgmt\employees\EmployeesForm.tsx" />
+    <Content Remove="wwwroot\ts\pages\mgmt\employees\EmployeesNewForm.tsx" />
+    <Content Remove="wwwroot\ts\pages\mgmt\Footer.tsx" />
+    <Content Remove="wwwroot\ts\pages\mgmt\Header.tsx" />
+    <Content Remove="wwwroot\ts\pages\mgmt\Main.tsx" />
+    <Content Remove="wwwroot\ts\pages\mgmt\ManagementApp.tsx" />
+    <Content Remove="wwwroot\ts\pages\mgmt\reporting\ActionItemForm.tsx" />
+    <Content Remove="wwwroot\ts\pages\mgmt\reporting\Closeout.tsx" />
+    <Content Remove="wwwroot\ts\pages\mgmt\reporting\Cord.tsx" />
+    <Content Remove="wwwroot\ts\pages\mgmt\reporting\Graphics.tsx" />
+    <Content Remove="wwwroot\ts\pages\mgmt\reporting\Nomination.tsx" />
+    <Content Remove="wwwroot\ts\pages\mgmt\reporting\Observer.tsx" />
+    <Content Remove="wwwroot\ts\pages\mgmt\reporting\OIMS.tsx" />
+    <Content Remove="wwwroot\ts\pages\mgmt\reporting\Participation.tsx" />
+    <Content Remove="wwwroot\ts\pages\mgmt\Sites.tsx" />
+    <Content Remove="wwwroot\ts\pages\mgmt\SitesEditForm.tsx" />
+    <Content Remove="wwwroot\ts\pages\mgmt\SitesForm.tsx" />
+    <Content Remove="wwwroot\ts\pages\mgmt\SitesNewForm.tsx" />
+    <Content Remove="wwwroot\ts\pages\mgmt\Users.tsx" />
+    <Content Remove="wwwroot\ts\pages\mgmt\users\UsersEditForm.tsx" />
+    <Content Remove="wwwroot\ts\pages\mgmt\users\UsersForm.tsx" />
+    <Content Remove="wwwroot\ts\pages\mgmt\users\UsersNewForm.tsx" />
+    <Content Remove="wwwroot\ts\pages\MyParticipation.tsx" />
+    <Content Remove="wwwroot\ts\pages\ReportType.tsx" />
+    <Content Remove="wwwroot\ts\pages\SafeChoice.tsx" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.SQS" Version="3.5.1.14" />
+    <PackageReference Include="Bootstrap.Multiselect" Version="0.9.13" />
+    <PackageReference Include="EPPlus" Version="5.5.3" />
+    <PackageReference Include="FreeSpire.XLS" Version="10.10.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.8" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+    <PackageReference Include="Moq" Version="4.16.1" />
+    <PackageReference Include="Npgsql" Version="5.0.2" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.2" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL.Design" Version="1.1.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.8.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\A1DMSShared\A1DMSShared.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <TypeScriptCompile Include="wwwroot\ts\pages\MyParticipation.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\SafeChoice.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\HazardId.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\LSA.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\ReportType.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\CardLabel.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\Card.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\Auth.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\mgmt\CardDetails.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\CardApp.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\mgmt\reporting\ActionItemForm.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\mgmt\reporting\Closeout.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\mgmt\reporting\Cord.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\mgmt\reporting\Graphics.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\mgmt\reporting\Nomination.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\mgmt\reporting\Participation.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\mgmt\reporting\OIMS.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\mgmt\reporting\Observer.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\mgmt\reporting\NominatedCards.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\mgmt\Cards.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\mgmt\employees\Employees.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\mgmt\companies\Companies.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\mgmt\departments\Departments.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\mgmt\departments\DepartmentsEditForm.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\mgmt\departments\DepartmentsForm.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\mgmt\departments\DepartmentsNewForm.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\mgmt\companies\CompaniesEditForm.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\mgmt\companies\CompaniesForm.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\mgmt\companies\CompaniesNewForm.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\mgmt\employees\EmployeesEditForm.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\mgmt\employees\EmployeesForm.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\mgmt\employees\EmployeesNewForm.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\mgmt\users\UsersEditForm.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\mgmt\users\UsersForm.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\mgmt\users\UsersNewForm.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\mgmt\sites\SitesEditForm.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\mgmt\sites\SitesNewForm.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\mgmt\sites\SitesForm.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\mgmt\sites\Sites.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\mgmt\users\Users.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="wwwroot\ts\pages\mgmt\ManagementApp.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+  </ItemGroup>
+
+</Project>
